@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+echo -n "Mis kasutajanimega kasutajat te soovite luua?"
+read kasutaja
+useradd -m $kasutaja
+#
+#skripti lõpp
