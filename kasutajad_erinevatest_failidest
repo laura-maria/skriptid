@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+echo -n "Sisesta fail, kust võetakse kasutaja nimed: "
+read $kasutaja_nimed
+echo -n "Sisesta fail, kust võetakse nendele kasutajatele paroolid: "
+read $paroolid_kasutajatele
+
+useradd -m $kasutaja_nimed
+echo $kasutaja_nimed:$paroolid_kasutajatele | chpasswd
