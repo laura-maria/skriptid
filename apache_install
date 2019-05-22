@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+dpkg-query -W -f='${status}' apache2
+
+apt-get update && apt-get upgrade -y
+apt-get install apache2
