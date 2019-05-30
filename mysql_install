@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+MYSQL=$(dpkg-query -W -f='${status}' mysql 2>/dev/null | grep -c "Mysql on juba olemas")
+if [ $MYSQL -eq 0 ]
+then
+	echo "Mysql installimine"
+	pause
+	apt-get install mysql-server -y
+
+elif [ $MYSQL -eq 1 ]
+then
+	echo "Mysql on juba olemas! :)"
+	pause
+	systemctl status mysql
+fi
