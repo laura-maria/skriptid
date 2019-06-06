@@ -3,13 +3,13 @@ clear
 echo "============================================"
 echo "WordPress Install Script"
 echo "============================================"
-echo "Database Name: "
+echo "Andmebaasi nimi: "
 read -e dbname
-echo "Database User: "
+echo "Andmebassi kasutaja: "
 read -e dbuser
-echo "Database Password: "
+echo "Kasutaja parool: "
 read -s dbpass
-echo "run install? (y/n)"
+echo "Installin? (y/n)"
 read -e run
 if [ "$run" == n ] ; then
 exit
